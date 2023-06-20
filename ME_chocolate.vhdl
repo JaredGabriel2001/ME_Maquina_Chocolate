@@ -33,7 +33,7 @@ architecture ME_choc of ME_chocolate is
     
     component sEA is
         port(
-            ea     : in bit_vector(2 downto 0);
+            pe     : in bit_vector(2 downto 0);
             m_dev  : out std_logic;
             m_cof  : out std_logic;
             d_disp : out std_logic;
