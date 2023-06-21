@@ -1,0 +1,22 @@
+v 4
+file . "sEA.vhdl" "2efb91699b7bbd292f8f0492cd6abc3462057d72" "20230621171735.924":
+  entity sea at 1( 0) + 0 on 251;
+  architecture fsaida_ea of sea at 14( 253) + 0 on 252;
+file . "ME_chocolate.vhdl" "d8c0737d90942cc387f9a5197c6d4b117837b8f4" "20230621171735.889":
+  entity me_chocolate at 1( 0) + 0 on 247;
+  architecture me_choc of me_chocolate at 16( 347) + 0 on 248;
+file . "ffd.vhdl" "8d3afb7d43ad08ab56085c49e57c393b31f4b65c" "20230621171735.852":
+  entity ffd at 1( 0) + 0 on 243;
+  architecture latch of ffd at 13( 245) + 0 on 244;
+file . "fEA.vhdl" "a80d508b98557ef83954fed467a069c96f2cd128" "20230621171735.829":
+  entity fea at 1( 0) + 0 on 241;
+  architecture fentrada_ea of fea at 14( 264) + 0 on 242;
+file . "ffjk.vhdl" "c15775b0813ff89a94f22c9d99cc6c772f24b2cf" "20230621171735.869":
+  entity ffjk at 1( 0) + 0 on 245;
+  architecture latch of ffjk at 13( 246) + 0 on 246;
+file . "registrador.vhdl" "d0fb35e9bfc288441ddf33089d71a495347c4ee3" "20230621171735.908":
+  entity registrador at 1( 0) + 0 on 249;
+  architecture storage of registrador at 12( 241) + 0 on 250;
+file . "tb_chocolate.vhdl" "1ba6bfda73e8ba76917a3b0acf88a42961136794" "20230621171735.940":
+  entity tb_chocolate at 1( 0) + 0 on 253;
+  architecture chocolate of tb_chocolate at 7( 80) + 0 on 254;
