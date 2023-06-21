@@ -9,7 +9,7 @@ entity ME_chocolate is
         m_50         : in std_logic;
         out_dev      : out std_logic;
         out_cof      : out std_logic;
-        out_disp     : out std_logic;
+        out_disp     : out std_logic
     );
 end entity;
 
@@ -18,8 +18,8 @@ architecture ME_choc of ME_chocolate is
         port(
             m25 : in std_logic;
             m50 : in std_logic;
-            ea  : in bit_vector(2 downto 0);
-            pe  : out bit_vector(2 downto 0);
+            ea  : in std_logic_vector(2 downto 0);
+            pe  : out std_logic_vector(2 downto 0)
         );
     end component;
     
@@ -33,10 +33,10 @@ architecture ME_choc of ME_chocolate is
     
     component sEA is
         port(
-            pe     : in bit_vector(2 downto 0);
+            pe     : in std_logic_vector(2 downto 0);
             m_dev  : out std_logic;
             m_cof  : out std_logic;
-            d_disp : out std_logic;
+            d_disp : out std_logic
         );
     end component;
 
@@ -44,12 +44,13 @@ architecture ME_choc of ME_chocolate is
     signal sm25, sm50        : std_logic;
     signal sdev, scof, sdisp : std_logic;
 
+    begin
     u_fcea : fEA port map (sm25, sm50, sea_reg, spe_reg);
     u_reg  : regis port map(spe_reg, reset, clock, sea_reg);
     u_fsea : sEA port map(spe_reg, sdev, scof, sdisp);
 
-	    out_dev <= sdev;
-        out_cof <= scof;
-        out_disp <= sdisp;
-end architecture;
+    out_dev <= sdev;
+    out_cof <= scof;
+    out_disp <= sdisp;
 
+end architecture;
