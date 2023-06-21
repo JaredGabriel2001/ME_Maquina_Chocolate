@@ -18,11 +18,10 @@ architecture storage of regis is
             q, nq  : out std_logic
         );
     end component;
-
+signal pr_aux: std_logic := '1';
 begin
-
-    reg : for i in 2 downto 0 generate
-        r : ffd port map(din(i), clk, '1', cl, dout(i));
-    end generate reg;
+    u_ffd1 : FFD port map(din(0),clk,pr_aux,cl,dout(0));
+    u_ffd2 : FFD port map(din(1),clk,pr_aux,cl,dout(1));
+    u_ffd3 : FFD port map(din(2),clk,pr_aux,cl,dout(2));
 
 end architecture;
