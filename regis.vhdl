@@ -20,8 +20,8 @@ architecture storage of regis is
     end component;
 signal pr_aux: std_logic := '1';
 begin
-    u_ffd1 : FFD port map(din(0),clk,pr_aux,cl,dout(0));
-    u_ffd2 : FFD port map(din(1),clk,pr_aux,cl,dout(1));
-    u_ffd3 : FFD port map(din(2),clk,pr_aux,cl,dout(2));
+    u_ffd1 : ffd port map(din(0),clk,pr_aux,cl,dout(0));
+    u_ffd2 : ffd port map(din(1),clk,pr_aux,cl,dout(1));
+    u_ffd3 : ffd port map(din(2),clk,pr_aux,cl,dout(2));
 
 end architecture;
